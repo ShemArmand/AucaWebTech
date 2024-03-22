@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+    <servlet>
+        <servlet-name>StudentControllerServlet</servlet-name>
+        <servlet-class>control.StudentController</servlet-class>
+        <!-- Initialize the servlet when the web application starts -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CreateStudentServlet</servlet-name>
+        <servlet-class>control.CreateStudentServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteTeacherServlet</servlet-name>
+        <servlet-class>control.DeleteTeacherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StudentControllerServlet</servlet-name>
+        <url-pattern>/student/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CreateStudentServlet</servlet-name>
+        <url-pattern>/CreateStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteTeacherServlet</servlet-name>
+        <url-pattern>/DeleteTeacher</url-pattern>
+    </servlet-mapping>
+    
+
+    <display-name>StudentRegistration</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>home.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+    </welcome-file-list>
+</web-app>

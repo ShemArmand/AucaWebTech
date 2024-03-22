@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/webtekdb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="connection.pool_size">3</property>
+
+		
+        <!-- Hibernate dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Show SQL queries in the console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Update the database schema automatically 
+        
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        -->
+         
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        
+
+        <!-- Mapping files -->
+        <!-- Add more <mapping class="..."/> entries for additional annotated classes 
+        
+        <mapping class="model.AcademicUnit"/>
+        <mapping class="model.Course"/>
+        <mapping class="model.CourseDefinition"/>
+        <mapping class="model.Semester"/>
+        <mapping class="model.Student"/>
+        <mapping class="model.StudentCourse"/>
+        <mapping class="model.StudentRegistration"/>
+        <mapping class="model.Teacher"/>
+        -->
+        
+        <mapping class="model.AcademicUnit"/>
+        <mapping class="model.Course"/>
+        <mapping class="model.CourseDefinition"/>
+        <mapping class="model.Semester"/>
+        <mapping class="model.Student"/>
+        <mapping class="model.StudentCourse"/>
+        <mapping class="model.StudentRegistration"/>
+        <mapping class="model.Teacher"/>
+        <mapping class="model.RegistrarUser"/>
+    </session-factory>
+</hibernate-configuration>
