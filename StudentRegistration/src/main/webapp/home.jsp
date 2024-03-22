@@ -185,7 +185,7 @@ button {
     </main>
 
     <footer>
-        <p>&copy; RWEGO MUHOZA Alain Patrick 23738</p>
+        <p>&copy; Kayiranga Shema Armand 23729</p>
     </footer>
 </body>
 
