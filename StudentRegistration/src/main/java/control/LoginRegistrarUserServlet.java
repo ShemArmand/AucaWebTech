@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,10 +38,13 @@ public class LoginRegistrarUserServlet extends HttpServlet {
         if (user != null) {
             // User exists, set session attribute to mark as logged in
             HttpSession httpSession = request.getSession();
+            httpSession.setMaxInactiveInterval(1 * 60); // Set timeout in seconds
             httpSession.setAttribute("loggedInUser", user);
+            Cookie loginCookie = new Cookie("LogUser",user.getRegistrarUserName());
 
             // Redirect to a success page
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            response.sendRedirect(request.getContextPath() + "/index.html");
+            response.addCookie(loginCookie);
         } else {
             // User does not exist or login failed
             response.sendRedirect(request.getContextPath() + "/loginFailed.jsp");

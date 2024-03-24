@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <head>
     <title>All Students</title>
@@ -66,6 +68,44 @@
 <body>
     <div class="container">
         <h1>All Students</h1>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#2980B9 ">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="ListStudentsServlet">List of Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListTeachersServlet">List of Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListCourseDefinitionsServlet">Course Definition</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListSemestersServlet">Semesters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListAcademicUnitsServlet">Academic units</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListCoursesServlet">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListStudentRegistrationsServlet">Student Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ListStudentCoursesServlet">Student per course</a>
+                </li>
+               
+            </ul>
+             <span class="navbar-text">
+                <form action="loginn.jsp" method="get">
+                <button type="submit" class="btn btn-danger">Logout</button>
+       			</form>
+                </span>
+
+
+        </nav>
+        
         <table>
             <tr>
                 <th>ID</th>

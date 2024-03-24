@@ -39,7 +39,7 @@
 <body>
     <div class="container">
         <h1>Welcome to the Student Management System</h1>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light background-color: #70342B">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="ListStudentsServlet">List of Students</a>
